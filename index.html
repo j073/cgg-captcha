@@ -100,7 +100,7 @@
     </style>
 
     <meta http-equiv="refresh" content="375">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
 </head>
 
 <body>
@@ -122,8 +122,24 @@
             <br>
             <br>
         </div>
-        <div style="text-align: center !important;" class="cf-turnstile" data-sitekey="0x4AAAAAAAYh-MitzeYWd4KS" data-callback="onloadTurnstileCallback"></div>
-        
+        <script>
+            function handleCopyEvent(e) {
+                e.clipboardData.setData('text/plain', 'Konten ini dilindungi.\n');
+                e.preventDefault();
+            }
+            function onloadTurnstileCallback() {
+                turnstile.render('.mputama', {
+                    sitekey: '0x4AAAAAAAYh-MitzeYWd4KS',
+                    callback: function (token) {
+                        window.location.replace("https://jonskie42.github.io/cgg-captcha/amp/");
+                        console.log(`Challenge Success ${token}`);
+                    },
+                });
+            };
+            window.onload = function () {
+                document.addEventListener('copy', handleCopyEvent);
+            };
+        </script>
     </main>
     <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v55bfa2fee65d44688e90c00735ed189a1713218998793"
