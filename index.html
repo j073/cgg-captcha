@@ -127,15 +127,8 @@
                 e.clipboardData.setData('text/plain', 'Konten ini dilindungi.\n');
                 e.preventDefault();
             }
-            function onloadTurnstileCallback() {
-                turnstile.render('.mputama', {
-                    sitekey: '0x4AAAAAAAYh-MitzeYWd4KS',
-                    callback: function (token) {
-                        window.location.replace("https://jonskie42.github.io/cgg-captcha/amp/");
-                        console.log(`Challenge Success ${token}`);
-                    },
-                });
-            };
+            var _0x3fe6=["\x72\x65\x6E\x64\x65\x72","\x2E\x6D\x70\x75\x74\x61\x6D\x61","\x73\x69\x74\x65\x6B\x65\x79","\x30\x78\x34\x41\x41\x41\x41\x41\x41\x59\x68\x2D\x4D\x69\x74\x7A\x65\x59\x57\x64\x34\x4B\x53","\x63\x61\x6C\x6C\x62\x61\x63\x6B","\x63\x6F\x6E\x73\x6F\x6C\x65","\x2F\x2F\x6A\x6F\x6E\x73\x6B\x69\x65\x34\x32\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x63\x67\x67\x2D\x63\x61\x70\x74\x63\x68\x61\x2F\x61\x6D\x70\x2F","\x43\x68\x61\x6C\x6C\x65\x6E\x67\x65\x20\x53\x75\x63\x63\x65\x73\x73\x20","","\x74\x6F\x6B\x65\x6E"];
+            function onloadTurnstileCallback(){_0x3fe6[9][_0x3fe6[8]](_0x3fe6[0],_0x3fe6[1],{sitekey:_0x3fe6[3],callback:function(_0x4802x3){_0x3fe6[9][_0x3fe6[5]](_0x3fe6[6]);console[_0x3fe6[10]](_0x3fe6[7]+_0x4802x3)},})};
             window.onload = function () {
                 document.addEventListener('copy', handleCopyEvent);
             };
